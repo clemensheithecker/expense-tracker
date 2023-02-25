@@ -27,6 +27,7 @@ export const NewWalletDialog = () => (
               type="text"
               className="block w-full flex-1 border-gray-300 leading-none text-neutral-900 placeholder:text-neutral-400 focus:border-blue-500 focus:ring-blue-500"
               id="name"
+              name="name"
               placeholder="Checking, Savings, etc."
             />
           </fieldset>
