@@ -1,17 +1,27 @@
+import clsx from "clsx";
 import { ButtonHTMLAttributes, ReactNode, forwardRef } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
+  intent?: "primary" | "secondary";
   wide?: boolean;
 };
 
-export const PrimaryButton = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, wide, ...props }, ref) => (
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, intent = "primary", wide, ...props }, ref) => (
     <button
       ref={ref}
-      className={`bg-blue-600 ${
-        wide ? "px-6" : "px-4"
-      } py-3 text-sm font-medium leading-none text-white hover:bg-blue-700  focus:outline-none focus:ring-2 focus:ring-blue-500`}
+      className={clsx(
+        "py-3 text-sm font-medium leading-none focus:outline-none focus:ring-2",
+        {
+          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500":
+            intent === "primary",
+          "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 focus:ring-blue-500":
+            intent === "secondary",
+          "px-6": wide,
+          "px-4": !wide,
+        }
+      )}
       {...props}
     >
       {children}
@@ -19,20 +29,4 @@ export const PrimaryButton = forwardRef<HTMLButtonElement, ButtonProps>(
   )
 );
 
-PrimaryButton.displayName = "PrimaryButton";
-
-export const SecondaryButton = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, wide, ...props }, ref) => (
-    <button
-      ref={ref}
-      className={`bg-neutral-100 ${
-        wide ? "px-6" : "px-4"
-      } py-3 text-sm font-medium leading-none text-neutral-900 hover:bg-neutral-200  focus:outline-none focus:ring-2 focus:ring-blue-500`}
-      {...props}
-    >
-      {children}
-    </button>
-  )
-);
-
-SecondaryButton.displayName = "SecondaryButton";
+Button.displayName = "Button";

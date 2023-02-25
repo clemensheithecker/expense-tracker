@@ -1,14 +1,16 @@
 "use client";
 
 import { Dialog } from "./Dialog";
-import { PrimaryButton, SecondaryButton } from "./Buttons";
+import { Button } from "./Buttons";
 import * as RadixDialog from "@radix-ui/react-dialog";
 
 export const NewWalletDialog = () => (
   <>
     <Dialog>
       <RadixDialog.Trigger asChild>
-        <SecondaryButton wide>Create wallet</SecondaryButton>
+        <Button intent="secondary" wide>
+          Create wallet
+        </Button>
       </RadixDialog.Trigger>
       <Dialog.Content>
         <Dialog.Title>Create wallet</Dialog.Title>
@@ -31,10 +33,10 @@ export const NewWalletDialog = () => (
 
           <div className="mt-6 flex justify-end space-x-2">
             <Dialog.Close>
-              <SecondaryButton>Cancel</SecondaryButton>
+              <Button intent="secondary">Cancel</Button>
             </Dialog.Close>
             <Dialog.Close>
-              <PrimaryButton type="submit">Create</PrimaryButton>
+              <Button type="submit">Create</Button>
             </Dialog.Close>
           </div>
         </form>
