@@ -1,20 +1,25 @@
 "use client";
 
-import { Dialog } from "./Dialog";
-import { Button } from "./Buttons";
-import * as RadixDialog from "@radix-ui/react-dialog";
 import { PlusIcon } from "@heroicons/react/20/solid";
+import { Button } from "./Buttons";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "./Dialog";
 
 export const NewWalletDialog = () => (
   <>
     <Dialog>
-      <RadixDialog.Trigger asChild>
+      <DialogTrigger asChild>
         <Button intent="secondary" icon={<PlusIcon />} wide>
           Create wallet
         </Button>
-      </RadixDialog.Trigger>
-      <Dialog.Content>
-        <Dialog.Title>Create wallet</Dialog.Title>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogTitle>Create wallet</DialogTitle>
         <form
           onSubmit={(event) => {
             event.preventDefault();
@@ -32,17 +37,16 @@ export const NewWalletDialog = () => (
               placeholder="Checking, Savings, etc."
             />
           </fieldset>
-
           <div className="mt-6 flex justify-end space-x-2">
-            <Dialog.Close>
+            <DialogClose>
               <Button intent="secondary">Cancel</Button>
-            </Dialog.Close>
-            <Dialog.Close>
+            </DialogClose>
+            <DialogClose>
               <Button type="submit">Create</Button>
-            </Dialog.Close>
+            </DialogClose>
           </div>
         </form>
-      </Dialog.Content>
+      </DialogContent>
     </Dialog>
   </>
 );
