@@ -15,7 +15,7 @@ export const DialogContent = forwardRef<HTMLDivElement, DialogProps>(
     <DialogPrimitive.Portal>
       <DialogPrimitive.Overlay className="fixed inset-0 bg-neutral-900/40 data-[state=open]:animate-overlayShow" />
       <DialogPrimitive.Content
-        className="fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] bg-white p-6 shadow-xl focus:outline-none data-[state=open]:animate-contentShow"
+        className="fixed top-1/2 left-1/2 max-h-[85vh] w-[90vw] max-w-md -translate-x-2/4 -translate-y-2/4 bg-white p-6 shadow-xl focus:outline-none data-[state=open]:animate-contentShow"
         {...props}
         ref={forwardedRef}
       >
