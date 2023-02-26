@@ -3,12 +3,13 @@
 import { Dialog } from "./Dialog";
 import { Button } from "./Buttons";
 import * as RadixDialog from "@radix-ui/react-dialog";
+import { PlusIcon } from "@heroicons/react/20/solid";
 
 export const NewWalletDialog = () => (
   <>
     <Dialog>
       <RadixDialog.Trigger asChild>
-        <Button intent="secondary" wide>
+        <Button intent="secondary" icon={<PlusIcon className="h-5 w-5" />} wide>
           Create wallet
         </Button>
       </RadixDialog.Trigger>

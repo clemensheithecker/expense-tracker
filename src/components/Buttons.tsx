@@ -4,15 +4,16 @@ import { ButtonHTMLAttributes, ReactNode, forwardRef } from "react";
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
   intent?: "primary" | "secondary";
+  icon?: ReactNode;
   wide?: boolean;
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, intent = "primary", wide, ...props }, ref) => (
+  ({ children, intent = "primary", icon, wide, ...props }, ref) => (
     <button
       ref={ref}
       className={clsx(
-        "py-3 text-sm font-medium leading-none focus:outline-none focus:ring-2",
+        "flex h-9 items-center py-2 text-sm font-medium leading-none focus:outline-none focus:ring-2",
         {
           "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500":
             intent === "primary",
@@ -24,6 +25,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       )}
       {...props}
     >
+      {icon && <span className="mr-2 hidden sm:block">{icon}</span>}
       {children}
     </button>
   )
