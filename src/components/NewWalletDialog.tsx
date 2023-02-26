@@ -9,7 +9,7 @@ export const NewWalletDialog = () => (
   <>
     <Dialog>
       <RadixDialog.Trigger asChild>
-        <Button intent="secondary" icon={<PlusIcon className="h-5 w-5" />} wide>
+        <Button intent="secondary" icon={<PlusIcon />} wide>
           Create wallet
         </Button>
       </RadixDialog.Trigger>

@@ -25,7 +25,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       )}
       {...props}
     >
-      {icon && <span className="mr-2 hidden sm:block">{icon}</span>}
+      {icon && <span className="mr-2 hidden h-5 w-5 sm:block">{icon}</span>}
       {children}
     </button>
   )
