@@ -6,11 +6,11 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import { kebabCase } from "lodash";
 import Link from "next/link";
 import { useMemo } from "react";
 import CurrencyAmount from "./CurrencyAmount";
 import Date from "./Date";
-import { kebabCase } from "lodash";
 
 type Transaction = {
   id: string;
@@ -57,7 +57,7 @@ const TransactionTable = ({
         const value = info.getValue();
         const href = `/wallet/${kebabCase(value)}`;
         return (
-          <Link href={href} className="underline">
+          <Link href={href} className="hover:underline">
             {value}
           </Link>
         );
@@ -74,8 +74,8 @@ const TransactionTable = ({
 
   return (
     <div className="relative overflow-x-auto">
-      <table className="w-full text-left text-sm text-neutral-500">
-        <thead className="bg-gray-50 text-xs uppercase text-neutral-700">
+      <table className="w-full text-left text-neutral-700">
+        <thead className="border-b-2 border-neutral-200 bg-neutral-50 text-sm font-semibold tracking-wide text-neutral-900">
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
@@ -93,9 +93,12 @@ const TransactionTable = ({
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id} className="border-b bg-white">
+            <tr
+              key={row.id}
+              className="text-sm odd:bg-white even:bg-neutral-50"
+            >
               {row.getVisibleCells().map((cell) => (
-                <td key={cell.id} className="px-6 py-4">
+                <td key={cell.id} className="px-6 py-3">
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}
