@@ -7,7 +7,8 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { useMemo } from "react";
-import { Date } from "./Date";
+import Amount from "./Amount";
+import Date from "./Date";
 
 type Transaction = {
   id: string;
@@ -30,7 +31,7 @@ const TransactionTable = ({
       header: () => <span>Transaction</span>,
     }),
     columnHelper.accessor("amount", {
-      cell: (info) => info.getValue(),
+      cell: (info) => <Amount amount={info.getValue()} />,
       header: () => <span>Amount</span>,
     }),
     columnHelper.accessor("date", {
