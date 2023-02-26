@@ -15,6 +15,16 @@ const wait = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
 export const NewWalletDialog = () => {
   const [open, setOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSubmitting(true);
+    wait().then(() => {
+      setSubmitting(false);
+      setOpen(false);
+    });
+  };
 
   return (
     <>
@@ -26,12 +36,7 @@ export const NewWalletDialog = () => {
         </DialogTrigger>
         <DialogContent>
           <DialogTitle>Create wallet</DialogTitle>
-          <form
-            onSubmit={(event) => {
-              wait().then(() => setOpen(false));
-              event.preventDefault();
-            }}
-          >
+          <form onSubmit={handleSubmit}>
             <fieldset className="mb-4 mt-6 flex items-center gap-6">
               <label
                 className="w-24 text-right text-neutral-900"
@@ -49,9 +54,13 @@ export const NewWalletDialog = () => {
             </fieldset>
             <div className="mt-6 flex justify-end space-x-2">
               <DialogClose>
-                <Button intent="secondary">Cancel</Button>
+                <Button intent="secondary" disabled={submitting}>
+                  Cancel
+                </Button>
               </DialogClose>
-              <Button type="submit">Create</Button>
+              <Button type="submit" disabled={submitting} loading={submitting}>
+                {submitting ? "Creating..." : "Create"}
+              </Button>
             </div>
           </form>
         </DialogContent>
