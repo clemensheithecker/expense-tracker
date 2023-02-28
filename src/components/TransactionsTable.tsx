@@ -1,5 +1,3 @@
-"use client";
-
 import {
   createColumnHelper,
   flexRender,
@@ -8,7 +6,7 @@ import {
 } from "@tanstack/react-table";
 import { kebabCase } from "lodash";
 import Link from "next/link";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import CurrencyAmount from "./CurrencyAmount";
 import Date from "./Date";
 
@@ -20,7 +18,7 @@ type Transaction = {
   wallet: string;
 };
 
-const TransactionTable = ({
+const TransactionsTable = ({
   transactions,
 }: {
   transactions: Transaction[];
@@ -73,7 +71,7 @@ const TransactionTable = ({
   });
 
   return (
-    <div className="relative overflow-x-auto">
+    <div className="relative hidden overflow-x-auto sm:block">
       <table className="w-full text-left text-neutral-700">
         <thead className="border-b-2 border-neutral-200 bg-neutral-50 text-sm font-semibold tracking-wide text-neutral-900">
           {table.getHeaderGroups().map((headerGroup) => (
@@ -110,4 +108,4 @@ const TransactionTable = ({
   );
 };
 
-export default TransactionTable;
+export default TransactionsTable;

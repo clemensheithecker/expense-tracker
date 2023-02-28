@@ -1,6 +1,6 @@
 import { startCase } from "lodash";
 
-export default function WalletPage({ params }: { params: { slug: string } }) {
+const WalletPage = ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <h1 className="mb-6 text-3xl font-bold text-neutral-900">
@@ -8,4 +8,6 @@ export default function WalletPage({ params }: { params: { slug: string } }) {
       </h1>
     </>
   );
-}
+};
+
+export default WalletPage;
