@@ -4,7 +4,7 @@ import { LoadingIndicator } from "./Icons";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
-  intent?: "primary" | "secondary";
+  intent?: "primary" | "secondary" | "danger";
   icon?: ReactNode;
   wide?: boolean;
   loading?: boolean;
@@ -21,6 +21,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             intent === "primary",
           "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 focus:ring-blue-500 disabled:text-neutral-400 disabled:hover:bg-neutral-100":
             intent === "secondary",
+          "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 disabled:bg-red-400 disabled:hover:bg-red-400":
+            intent === "danger",
           "px-6": wide,
           "px-4": !wide,
           "disabled:cursor-progress": loading,
