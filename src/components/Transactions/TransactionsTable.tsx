@@ -8,14 +8,7 @@ import { kebabCase } from "lodash";
 import Link from "next/link";
 import { useMemo } from "react";
 import { CurrencyAmount, FormattedDate } from "../Text";
-
-type Transaction = {
-  id: string;
-  name: string;
-  date: string;
-  amount: number;
-  wallet: string;
-};
+import { Transaction } from "./types";
 
 export const TransactionsTable = ({
   transactions,
