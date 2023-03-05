@@ -46,7 +46,7 @@ export const AlertDialogContent = forwardRef<HTMLDivElement, AlertDialogProps>(
 AlertDialogContent.displayName = "AlertDialogContent";
 
 export const AlertDialogTitle = ({ children }: { children: ReactNode }) => (
-  <AlertDialogPrimitive.Title className="m-0 mb-2 text-lg font-medium text-neutral-900">
+  <AlertDialogPrimitive.Title className="text-lg font-semibold leading-6 text-neutral-900">
     {children}
   </AlertDialogPrimitive.Title>
 );
@@ -56,7 +56,7 @@ export const AlertDialogDescription = ({
 }: {
   children: ReactNode;
 }) => (
-  <AlertDialogPrimitive.Description className="mt-2 mb-6 leading-normal text-neutral-500">
+  <AlertDialogPrimitive.Description className="mt-2 text-neutral-500">
     {children}
   </AlertDialogPrimitive.Description>
 );

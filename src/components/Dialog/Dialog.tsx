@@ -44,13 +44,13 @@ export const DialogContent = forwardRef<HTMLDivElement, DialogProps>(
 DialogContent.displayName = "DialogContent";
 
 export const DialogTitle = ({ children }: { children: ReactNode }) => (
-  <DialogPrimitive.Title className="m-0 mb-2 text-lg font-medium text-neutral-900">
+  <DialogPrimitive.Title className="text-lg font-semibold leading-6 text-neutral-900">
     {children}
   </DialogPrimitive.Title>
 );
 
 export const DialogDescription = ({ children }: { children: ReactNode }) => (
-  <DialogPrimitive.Description className="mt-2 mb-6 leading-normal text-neutral-500">
+  <DialogPrimitive.Description className="mt-2 text-neutral-500">
     {children}
   </DialogPrimitive.Description>
 );
