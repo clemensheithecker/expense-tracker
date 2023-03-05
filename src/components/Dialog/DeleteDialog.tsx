@@ -20,7 +20,6 @@ export const DeleteDialog = ({
 }) => (
   <AlertDialog>
     <AlertDialogTrigger asChild>
-      {/* Add intent="danger" */}
       <Button intent="secondary" icon={<TrashIcon />} wide>
         Delete {entityType}
       </Button>
@@ -36,8 +35,9 @@ export const DeleteDialog = ({
           <Button intent="secondary">Cancel</Button>
         </AlertDialogCancel>
         <AlertDialogAction asChild>
-          {/* Add intent="danger" */}
-          <Button type="submit">Delete</Button>
+          <Button type="submit" intent="danger">
+            Delete
+          </Button>
         </AlertDialogAction>
       </div>
     </AlertDialogContent>
