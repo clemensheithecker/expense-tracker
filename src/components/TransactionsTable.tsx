@@ -8,7 +8,7 @@ import { kebabCase } from "lodash";
 import Link from "next/link";
 import React, { useMemo } from "react";
 import CurrencyAmount from "./CurrencyAmount";
-import Date from "./Date";
+import FormattedDate from "./FormattedDate";
 
 type Transaction = {
   id: string;
@@ -45,7 +45,7 @@ const TransactionsTable = ({
     columnHelper.accessor("date", {
       cell: (info) => (
         <span className="block text-right">
-          <Date dateString={info.getValue()} />
+          <FormattedDate dateString={info.getValue()} />
         </span>
       ),
       header: () => <span className="block text-right">Date</span>,

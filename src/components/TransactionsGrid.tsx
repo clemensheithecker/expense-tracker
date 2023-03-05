@@ -2,7 +2,7 @@ import { kebabCase } from "lodash";
 import Link from "next/link";
 import { useMemo } from "react";
 import CurrencyAmount from "./CurrencyAmount";
-import Date from "./Date";
+import FormattedDate from "./FormattedDate";
 
 type Transaction = {
   id: string;
@@ -31,7 +31,7 @@ const TransactionsGrid = ({
               {transaction.name}
             </h3>
             <p className="flex items-center space-x-2 text-sm text-neutral-700">
-              <Date dateString={transaction.date} />
+              <FormattedDate dateString={transaction.date} />
               <Link
                 href={`/wallet/${kebabCase(transaction.wallet)}`}
                 className="hover:underline"
