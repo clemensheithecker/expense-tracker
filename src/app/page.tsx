@@ -1,6 +1,6 @@
-import NewWalletDialog from "@/components/NewWalletDialog";
+import { NewWalletDialog } from "@/components/Dialog";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
       <h1 className="mb-6 text-3xl font-bold text-neutral-900">
@@ -9,4 +9,6 @@ export default function HomePage() {
       <NewWalletDialog />
     </>
   );
-}
+};
+
+export default HomePage;

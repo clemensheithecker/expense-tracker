@@ -1,0 +1,72 @@
+[
+  {
+    "id": "74e96b3c-b4a4-4e1a-8f32-5186c372d1e9",
+    "name": "Grocery shopping",
+    "date": "2022-01-15T12:30:00.000Z",
+    "amount": -50.25,
+    "wallet": "Checking"
+  },
+  {
+    "id": "faea42d7-2e21-4757-a1c2-066d7d1ddda2",
+    "name": "Salary",
+    "date": "2022-01-31T00:00:00.000Z",
+    "amount": 2500.0,
+    "wallet": "Checking"
+  },
+  {
+    "id": "02b7d6af-69aa-469a-bc49-f8577d4232c9",
+    "name": "Restaurant",
+    "date": "2022-02-02T20:00:00.000Z",
+    "amount": -40.0,
+    "wallet": "Credit Card"
+  },
+  {
+    "id": "c5506ee4-b71f-4d0b-b6e1-fae70ee740f3",
+    "name": "Gas",
+    "date": "2022-02-07T10:00:00.000Z",
+    "amount": -30.0,
+    "wallet": "Checking"
+  },
+  {
+    "id": "b5c7a58f-c92d-4d26-afae-90b34dd1b30d",
+    "name": "Rent",
+    "date": "2022-02-01T00:00:00.000Z",
+    "amount": -1000.0,
+    "wallet": "Savings"
+  },
+  {
+    "id": "5d5e15de-788e-4c71-8cd5-5e9e5d5df26c",
+    "name": "Salary",
+    "date": "2022-02-28T00:00:00.000Z",
+    "amount": 2500.0,
+    "wallet": "Checking"
+  },
+  {
+    "id": "9a8162e1-d20b-4290-8d34-0aae452b58eb",
+    "name": "Amazon purchase",
+    "date": "2022-02-16T15:00:00.000Z",
+    "amount": -25.0,
+    "wallet": "Credit Card"
+  },
+  {
+    "id": "6b95e3cb-497e-47bb-b88a-9d245af19c4d",
+    "name": "Grocery shopping",
+    "date": "2022-02-21T12:30:00.000Z",
+    "amount": -60.0,
+    "wallet": "Checking"
+  },
+  {
+    "id": "0b69728a-3ba3-4b8f-9d90-2601d3712ee4",
+    "name": "Movies",
+    "date": "2022-03-01T00:00:00.000Z",
+    "amount": -45.0,
+    "wallet": "Savings"
+  },
+  {
+    "id": "ef14b69c-586d-4d5d-97c9-23e19a0bc303",
+    "name": "Electricity bill",
+    "date": "2023-03-04T00:00:00.000Z",
+    "amount": -80.0,
+    "wallet": "Checking"
+  }
+]
