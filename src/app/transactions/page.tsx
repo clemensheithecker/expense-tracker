@@ -1,5 +1,4 @@
-import TransactionsGrid from "@/components/TransactionsGrid";
-import TransactionsTable from "@/components/TransactionsTable";
+import { TransactionsGrid, TransactionsTable } from "@/components/Transactions";
 
 import fixtureTransactions from "@/fixtures/transactions.json";
 

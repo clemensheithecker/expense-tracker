@@ -1,7 +1,7 @@
 import { kebabCase } from "lodash";
 import Link from "next/link";
 import { useMemo } from "react";
-import { CurrencyAmount, FormattedDate } from "./Text";
+import { CurrencyAmount, FormattedDate } from "../Text";
 
 type Transaction = {
   id: string;
@@ -11,7 +11,7 @@ type Transaction = {
   wallet: string;
 };
 
-const TransactionsGrid = ({
+export const TransactionsGrid = ({
   transactions,
 }: {
   transactions: Transaction[];
@@ -47,5 +47,3 @@ const TransactionsGrid = ({
     </div>
   );
 };
-
-export default TransactionsGrid;
