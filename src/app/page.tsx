@@ -1,4 +1,4 @@
-import NewWalletDialog from "@/components/NewWalletDialog";
+import { NewWalletDialog } from "@/components/Dialog";
 
 const HomePage = () => {
   return (

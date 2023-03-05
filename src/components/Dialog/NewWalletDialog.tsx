@@ -2,7 +2,7 @@
 
 import { PlusIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
-import { Button } from "./Buttons";
+import { Button } from "../Buttons";
 import {
   Dialog,
   DialogClose,
@@ -68,5 +68,3 @@ export const NewWalletDialog = () => {
     </>
   );
 };
-
-export default NewWalletDialog;
