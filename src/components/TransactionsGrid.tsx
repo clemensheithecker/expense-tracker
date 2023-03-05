@@ -1,8 +1,7 @@
 import { kebabCase } from "lodash";
 import Link from "next/link";
 import { useMemo } from "react";
-import CurrencyAmount from "./CurrencyAmount";
-import FormattedDate from "./FormattedDate";
+import { CurrencyAmount, FormattedDate } from "./Text";
 
 type Transaction = {
   id: string;

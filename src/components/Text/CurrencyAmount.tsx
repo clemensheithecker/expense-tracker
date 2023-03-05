@@ -7,7 +7,7 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 2,
 });
 
-const CurrencyAmount = ({ amount }: { amount: number }) => (
+export const CurrencyAmount = ({ amount }: { amount: number }) => (
   <span
     className={clsx({
       "text-green-500": amount > 0,
@@ -18,5 +18,3 @@ const CurrencyAmount = ({ amount }: { amount: number }) => (
     {currencyFormatter.format(amount)}
   </span>
 );
-
-export default CurrencyAmount;

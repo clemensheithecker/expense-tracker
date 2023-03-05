@@ -1,7 +1,7 @@
 import { format, parseISO } from "date-fns";
 import { useMemo } from "react";
 
-const FormattedDate = ({ dateString }: { dateString: string }) => {
+export const FormattedDate = ({ dateString }: { dateString: string }) => {
   const DATE_FORMAT = "MMM d, yyyy";
 
   const dateObject = useMemo(() => parseISO(dateString), [dateString]);
@@ -16,5 +16,3 @@ const FormattedDate = ({ dateString }: { dateString: string }) => {
     </time>
   );
 };
-
-export default FormattedDate;

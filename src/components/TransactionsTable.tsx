@@ -6,9 +6,8 @@ import {
 } from "@tanstack/react-table";
 import { kebabCase } from "lodash";
 import Link from "next/link";
-import React, { useMemo } from "react";
-import CurrencyAmount from "./CurrencyAmount";
-import FormattedDate from "./FormattedDate";
+import { useMemo } from "react";
+import { CurrencyAmount, FormattedDate } from "./Text";
 
 type Transaction = {
   id: string;
