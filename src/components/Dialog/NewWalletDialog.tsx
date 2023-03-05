@@ -33,7 +33,7 @@ export const NewWalletDialog = () => {
             Create wallet
           </Button>
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent open>
           <DialogTitle>Create wallet</DialogTitle>
           <form onSubmit={handleSubmit}>
             <fieldset className="mb-4 mt-6 flex items-center gap-6">

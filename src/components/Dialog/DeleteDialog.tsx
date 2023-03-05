@@ -39,7 +39,7 @@ export const DeleteDialog = ({
           Delete {entityType}
         </Button>
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent open>
         <AlertDialogTitle>Delete {entityType}?</AlertDialogTitle>
         <AlertDialogDescription>
           Are you sure you want to delete <strong>{entityName}</strong>{" "}
