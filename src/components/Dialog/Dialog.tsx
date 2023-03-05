@@ -34,11 +34,9 @@ export const DialogTitle = ({ children }: { children: ReactNode }) => (
 );
 
 export const DialogDescription = ({ children }: { children: ReactNode }) => (
-  <DialogPrimitive.Description className="text- mt-2 mb-6 leading-normal text-neutral-500">
+  <DialogPrimitive.Description className="mt-2 mb-6 leading-normal text-neutral-500">
     {children}
   </DialogPrimitive.Description>
 );
 
-export const DialogClose = ({ children }: { children: ReactNode }) => (
-  <DialogPrimitive.Close asChild>{children}</DialogPrimitive.Close>
-);
+export const DialogClose = DialogPrimitive.Close;

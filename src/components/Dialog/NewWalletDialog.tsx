@@ -52,7 +52,7 @@ export const NewWalletDialog = () => {
               />
             </fieldset>
             <div className="mt-6 flex justify-end space-x-2">
-              <DialogClose>
+              <DialogClose asChild>
                 <Button intent="secondary" disabled={submitting}>
                   Cancel
                 </Button>
