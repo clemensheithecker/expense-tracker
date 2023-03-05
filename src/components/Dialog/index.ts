@@ -1,2 +1,1 @@
-export * from './Dialog'
-export * from './NewWalletDialog'
+export { NewWalletDialog } from "./NewWalletDialog";

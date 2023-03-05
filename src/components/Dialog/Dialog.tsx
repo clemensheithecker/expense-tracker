@@ -1,5 +1,5 @@
+"use client";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-
 import { ReactNode, forwardRef } from "react";
 
 type DialogProps = {

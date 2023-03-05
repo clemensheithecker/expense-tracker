@@ -1,2 +1,2 @@
-export * from './TransactionsGrid'
-export * from './TransactionsTable'
+export * from "./TransactionsGrid";
+export { TransactionsTable } from "./TransactionsTable";
