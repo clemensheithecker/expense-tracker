@@ -1,4 +1,8 @@
-import { DeleteWalletDialog, NewWalletDialog } from "@/components/Dialog";
+import {
+  DeleteWalletDialog,
+  NewTransactionDialog,
+  NewWalletDialog,
+} from "@/components/Dialog";
 
 const HomePage = () => {
   return (
@@ -9,6 +13,7 @@ const HomePage = () => {
       <div className=" space-y-2">
         <NewWalletDialog />
         <DeleteWalletDialog walletName="Checking" />
+        <NewTransactionDialog />
       </div>
     </>
   );
